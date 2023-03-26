@@ -1,0 +1,284 @@
+/* main.scss */
+
+/** custom **/
+
+.mobile-number-padding {
+  padding-left: 12px;
+}
+
+.control-button-label {
+  font-size: 16px;
+}
+
+@mixin auth-form-label {
+  @extend .fs-6, .fw-normal;
+}
+
+%auth-form-label {
+  @include auth-form-label;
+}
+
+.auth-form-label {
+  @extend %auth-form-label;
+}
+
+@mixin main-form-label {
+  @extend .item-body-fs, .fw-normal;
+}
+
+%main-form-label {
+  @include main-form-label;
+}
+
+.main-form-label {
+  @extend %main-form-label;
+}
+
+@mixin item-title {
+  @extend .text-black, .fw-normal;
+}
+
+%item-title {
+  @include item-title;
+}
+
+.item-title {
+  @extend %item-title;
+  font-size: 18px;
+}
+
+@mixin item-subtitle {
+  @extend .text-secondary, .fw-normal;
+}
+
+%item-subtitle {
+  @include item-subtitle;
+}
+
+.item-subtitle {
+  @extend %item-subtitle;
+  font-size: 14px;
+}
+
+.item-sub-subtitle {
+  @extend %item-subtitle;
+  font-size: 10px;
+}
+
+.item-icon {
+  @extend .me-2, .d-inline-block, .text-primary;
+}
+
+.item-body-fs {
+  font-size: 18px;
+}
+
+.item-body {
+  @extend .text-black, .d-inline-block, .text-nowrap, .item-body-fs;
+}
+
+.justify-start {
+  @extend .d-flex, .justify-content-start;
+}
+
+.justify-center {
+  @extend .d-flex, .justify-content-center;
+}
+
+.justify-end {
+  @extend .d-flex, .justify-content-end;
+}
+
+.justify-between {
+  @extend .d-flex, .justify-content-between;
+}
+
+.justify-around {
+  @extend .d-flex, .justify-content-around;
+}
+
+@mixin page-title {
+  @extend .justify-start, .align-self-center, .text-black, .fw-normal, .mb-0;
+}
+
+%page-title {
+  @include page-title;
+}
+
+.page-title {
+  @extend %page-title;
+  font-size: 30px;
+}
+
+.page-content {
+  @extend .mt-3;
+}
+
+@mixin page-subtitle {
+  @extend .justify-start, .align-self-center, .text-black, .fw-normal, .my-2;
+}
+
+%page-subtitle {
+  @include page-subtitle;
+}
+
+.page-subtitle {
+  @extend %page-subtitle;
+  font-size: 22px;
+}
+
+.item-actions {
+  @extend .d-flex, .align-self-center;
+}
+
+.app-header {
+  @extend .position-fixed, .top-0;
+  background-color: #fff;
+}
+
+.app-nav-area-bg {
+  background-color: rgb(3, 27, 77);
+}
+
+.app-nav-area {
+  @extend .position-fixed, .m-0, .p-3, .vh-100, .app-nav-area-bg;
+}
+
+.app-content-area {
+  @extend .my-3, .p-3, .bg-white;
+  background-color: #ffffff;
+}
+
+.app-nav-link {
+  @extend .fw-normal, .p-0;
+}
+
+.app-nav-active-link {
+  @extend .app-nav-link,
+    .vw-100,
+    .p-2;
+}
+
+.app-nav-inactive-link {
+  @extend .app-nav-link,
+    .vw-100,
+    .p-2;
+}
+
+.app-nav-active-text {
+  @extend  .text-white, .fw-bold;
+}
+
+.app-nav-inactive-text {
+  @extend  .text-white;
+}
+
+.app-nav-text {
+  font-size: 18px;
+}
+
+.tab-container {
+  @extend .p-2, .fs-6, .me-0, .fw-bold;
+  width: 250px;
+}
+
+.tab-active {
+  @extend .tab-container;
+  color: rgb(3, 27, 78);
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(131, 144, 175) rgb(131, 144, 175) white;
+  border-image: initial;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.tab-inactive {
+  @extend .tab-container, .text-secondary;
+  border-bottom-width: 2px;
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-style: solid;
+}
+
+.bg-count-card {
+  background-color: #fff !important;
+}
+
+.list-wrapper {
+  @extend .d-block, .mt-4;
+}
+
+.list-table {
+  @extend .shadow-none, .overflow-auto, .position-relative;
+  min-height: 150px;
+}
+
+.list-table-head {
+  @extend .bg-light, .item-body-fs, .overflow-auto;
+  border: 2px solid rgb(229, 232, 237);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.list-table-head-sticky {
+  @extend .sticky-top, .list-table-head;
+}
+
+.list-table-row-border {
+  border: 2px solid rgb(229, 232, 237)
+}
+
+// mobile viewport
+
+@media only screen and (max-width: 576px) {
+  .control-button-label {
+    font-size: 14px;
+  }
+  
+  .auth-form-label {
+    font-size: 13px;
+  }
+
+  .item-body-fs {
+    font-size: 13px;
+  }
+  
+  .main-form-label {
+    font-size: 15px;
+  }
+  
+  .item-title {
+    font-size: 15px;
+  }
+  
+  .item-subtitle {
+    font-size: 12px;
+  }
+  
+  .page-title {
+    font-size: 20px;
+  }
+
+  .page-subtitle {
+    font-size: 15px;
+  }
+
+  .app-nav-text {
+    font-size: 15px;
+  }
+}
+
+.form-control {
+  @extend .form-control;
+  background-color: #ffffff !important;
+}
+
+$body-bg: #ffffff;
+$body-color: #484848;
+$primary: #ef3d5f;
+$dark: #252325;
+$font-family-sans-serif: 'Quicksand', sans-serif;
+
+@import '~bootstrap/scss/bootstrap.scss';

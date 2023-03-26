@@ -1,0 +1,268 @@
+// site.scss
+
+@use 'main';
+
+.content-center {
+  @extend .h-100, .d-flex, .flex-column, .justify-content-center;
+}
+
+.site-footer {
+  height: auto;
+}
+
+.site-footer-info {
+  @extend .py-5, .text-white, .bg-black;
+  height: auto;
+}
+
+.site-footer-copy {
+  @extend .text-white, .bg-black;
+  height: 100px;
+}
+
+.site-nav-link-no-left-padding {
+  padding-left: 0 !important;
+}
+
+@mixin site-heading-font {
+  font-family: 'Montserrat', sans-serif;
+}
+
+%site-heading-font {
+  @include site-heading-font;
+}
+
+.site-heading-font {
+  @extend %site-heading-font;
+}
+
+.site-fs-1 {
+  @include site-heading-font;
+  font-size: 64px;
+}
+
+.site-fs-2 {
+  @include site-heading-font;
+  font-size: 48px;
+}
+
+.site-fs-3 {
+  @include site-heading-font;
+  font-size: 36px;
+}
+
+.site-fs-4 {
+  font-size: 24px;
+}
+
+.site-fs-5 {
+  font-size: 18px;
+}
+
+.site-body-fs {
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 576px) {
+  .site-fs-1 {
+    @include site-heading-font;
+    font-size: 36px;
+  }
+
+  .site-fs-2 {
+    @include site-heading-font;
+    font-size: 28px;
+  }
+
+  .site-fs-3 {
+    @include site-heading-font;
+    font-size: 24px;
+  }
+
+  .site-fs-4 {
+    font-size: 18px;
+  }
+
+  .site-fs-5 {
+    font-size: 14px;
+  }
+
+  .site-body-fs {
+    font-size: 14px;
+  }
+}
+
+.section-padding {
+  @extend .py-2, .py-lg-5;
+}
+
+.welcome-section > section:first-child {
+  background-image: url('images/Artboard-11.png');
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+
+.welcome-section > section:nth-child(2) {
+  background-color: #fbfbfb;
+}
+
+.service-mode-section {
+  @extend .bg-white, .section-padding;
+}
+
+.benefits-section {
+  @extend .section-padding;
+  background-image: url('images/Benefits background.png');
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.users-section {
+  @extend .section-padding;
+  background-color: #ee3760;
+}
+
+.repairers-section {
+  @extend .section-padding, .text-black;
+  background-color: #ffffff;
+}
+
+.experience-section {
+  @extend .section-padding;
+  background-image: url('images/Enjoy the replugg experience.png');
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.coverage-section {
+  @extend .section-padding;
+  background-color: #fcdda7;
+}
+
+.gadgets-section {
+  @extend .bg-white, .section-padding;
+}
+
+.locations-header-section {
+  @extend .section-padding;
+  background-color: #ee3760;
+}
+
+.locations-section {
+  @extend .bg-white, .section-padding;
+}
+
+.repairers-program-header-section {
+  @extend .section-padding, .bg-white;
+  color: #2f033a;
+}
+
+.repairers-program-details-section {
+  @extend .section-padding, .text-white;
+  background-color: #2f033a;
+}
+
+.repairers-program-features-section {
+  @extend .section-padding, .bg-white;
+  color: #2f033a;
+  background-image: url('images/Features (repairers program).png');
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.repairers-program-payments-section {
+  @extend .section-padding;
+  background-image: url('images/markus-winkler-ahjzVINkuCs-unsplash 1.png');
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #2f033a;
+}
+
+.repairers-program-funding-section {
+  @extend .section-padding;
+  color: #2f033a;
+  background-color: #fcdda7;
+  background-image: url('images/Funding background - repairers prog.png');
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.site-tab-active {
+  @include site-heading-font;
+  @extend .tab-active;
+}
+
+.site-tab-inactive {
+  @include site-heading-font;
+  @extend .tab-inactive;
+}
+
+.about-header-section {
+  @extend .locations-header-section;
+}
+
+.about-intro-section {
+  @extend .section-padding, .text-black;
+  background-color: #ffffff;
+}
+
+.about-problem-section {
+  @extend .about-intro-section;
+}
+
+.about-solution-section {
+  @extend .about-intro-section;
+}
+
+.about-statement-container {
+  border-radius: 40px;
+}
+
+.about-intern-section {
+  @extend .section-padding, .text-white;
+  background-color: #531a56;
+}
+
+.faqs-intro-section {
+  @extend .section-padding, .text-black;
+  background-color: #a7ddfc;
+}
+
+.faqs-faqs-section {
+  @extend .section-padding, .text-black;
+  background-color: #f3f3f3;
+}
+
+.faqs-faqs-section-container {
+  @extend .about-statement-container, .p-3, .p-lg-5;
+  box-shadow: 0px 0px 50px 15px rgba(0, 0, 0, 0.05);
+}
+
+.faqs-call-to-action-section {
+  @extend .section-padding, .text-black, .bg-transparent;
+}
+
+.site-feedback-area {
+  @extend .bg-white, .py-5, .px-3, .px-lg-5;
+  box-shadow: 0px 0px 50px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 40px;
+}
